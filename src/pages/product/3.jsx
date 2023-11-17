@@ -116,6 +116,16 @@ const ProductPage = () => {
             // border: '1px solid red',
             width: '30%',
           }}>
+            <Text
+              sx={{
+                fontSize: 20,
+                fontWeight: 700,
+                textAlign: 'left',
+                margin: '20px 0',
+              }}
+            >
+              Specifications
+            </Text>
             <Flex  align={'center'} direction={'column'}>
               {product.mockData.map((item, index) => {
                 const Icon = item.icon;
@@ -125,7 +135,6 @@ const ProductPage = () => {
                     flexDirection: 'row',
                     alignItems: 'center',
                     width: '100%',
-                    margin: '10px 0',
                     padding: '10px 0',
                   }}>
                     <Icon
