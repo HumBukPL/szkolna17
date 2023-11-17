@@ -10,7 +10,9 @@ export default function Home() {
     <>
       <Stack spacing="xl">
         <Hero />
-        <Group position="center" mt={100} noWrap spacing="xl">
+        <Group position="center" mt={100} noWrap spacing="xl" sx={{
+          marginBottom: 100,
+        }}>
           <Car1 />
           <Car2 />
           <Car3 />
