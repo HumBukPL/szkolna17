@@ -22,7 +22,7 @@ import { useDisclosure } from "@mantine/hooks";
 import {
   IconNotification,
   IconCode,
-  IconDeviceMobile,
+  IconCarTurbine,
   IconBook,
   IconChartPie3,
   IconFingerprint,
@@ -161,7 +161,7 @@ export default function HeaderMegaMenu() {
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: "100%" }}>
           <Box px="0.5rem">
-            <IconDeviceMobile size={30} />
+            <IconCarTurbine size={30} />
           </Box>
           <Group
             sx={{ height: "100%" }}

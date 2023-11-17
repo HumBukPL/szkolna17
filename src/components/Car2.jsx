@@ -59,12 +59,12 @@ const useStyles = createStyles((theme) => ({
 // Dane
 const mockdata = [
   { label: "2 passengers", icon: IconUsers },
-  { label: "100 km/h in 2.5 seconds", icon: IconGauge },
-  { label: "Automatic gearbox", icon: IconManualGearbox },
+  { label: "100 km/h in 2.2 seconds", icon: IconGauge },
+  { label: "Sequential gearbox", icon: IconManualGearbox },
   { label: "Petrol", icon: IconGasStation },
 ];
 
-export default function Car1() {
+export default function Car2() {
   const { classes } = useStyles();
   const features = mockdata.map((feature) => (
     <Center key={feature.label}>
@@ -76,16 +76,16 @@ export default function Car1() {
   return (
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section className={classes.imageSection}>
-        <Image maw={380} mx="auto" src="/Porshe1.png" alt="Porshe GT2 RS" />
+        <Image maw={380} mx="auto" src="/Porshe2.png" alt="Porshe GT2 RS" />
       </Card.Section>
 
       <Group position="apart" mt="md">
         <div>
           {/* Nazwa */}
-          <Text fw={500}>Porshe 911 GT2 RS</Text>
+          <Text fw={500}>Porshe 911 GT3 RS</Text>
           <Text fz="xs" c="dimmed">
             {/*  Rocznik */}
-            2018
+            2021
           </Text>
         </div>
         {/* <Badge variant="outline">25% off</Badge> */}
@@ -106,7 +106,7 @@ export default function Car1() {
           <div>
             <Text fz="xl" fw={700} sx={{ lineHeight: 1 }}>
               {/* Cena */}
-              $700,000
+              $950,000
             </Text>
             <Text fz="sm" c="dimmed" fw={500} sx={{ lineHeight: 1 }} mt={3}>
               in one payment
