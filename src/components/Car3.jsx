@@ -76,7 +76,7 @@ export default function Car3() {
   return (
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section className={classes.imageSection}>
-        <Image maw={380} mx="auto" src="/Porshe3.png" alt="Porshe GT2 RS" />
+        <Image maw={425} mx="auto" src="/Porshe3.png" alt="Porshe GT2 RS" />
       </Card.Section>
 
       <Group position="apart" mt="md">
