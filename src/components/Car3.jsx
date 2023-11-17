@@ -113,7 +113,9 @@ export default function Car3() {
             </Text>
           </div>
 
-          <Button radius="xl" style={{ flex: 1 }}>
+          <Button radius="xl" style={{ flex: 1 }} onClick={()=>{
+            window.location.href = '/product/3'
+          }}>
             View offer
           </Button>
         </Group>
