@@ -152,6 +152,7 @@ const ProductPage = () => {
                 const Icon = item.icon;
                 return (
                   <Box
+                  key={index}
                     sx={{
                       display: "flex",
                       flexDirection: "row",
