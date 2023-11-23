@@ -75,6 +75,7 @@ export default function Car3() {
 
   return (
     <Card withBorder radius="md" className={classes.card}>
+
       <Card.Section className={classes.imageSection}>
         <Image maw={425} mx="auto" src="/Porshe3.png" alt="Porshe GT2 RS" />
       </Card.Section>
@@ -88,7 +89,7 @@ export default function Car3() {
             2018
           </Text>
         </div>
-        {/* <Badge variant="outline">25% off</Badge> */}
+        <Badge variant="outline" color="red">Last chance</Badge>
       </Group>
 
       <Card.Section className={classes.section} mt="md">
@@ -113,7 +114,8 @@ export default function Car3() {
             </Text>
           </div>
 
-          <Button radius="xl" style={{ flex: 1 }} onClick={()=>{
+          <Button 
+          radius="xl" style={{ flex: 1 }} onClick={()=>{
             window.location.href = '/product/3'
           }}>
             View offer

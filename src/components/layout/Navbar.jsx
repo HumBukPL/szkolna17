@@ -17,6 +17,8 @@ import {
   IconUser,
   IconSettings,
   IconLogout,
+  IconBrandFacebook,
+  IconBrandInstagram,
   IconSwitchHorizontal,
 } from "@tabler/icons-react";
 
@@ -98,8 +100,8 @@ export default function NavbarMini() {
       </Navbar.Section>
       <Navbar.Section>
         <Stack justify="center" spacing={0}>
-          <NavbarLink icon={IconSwitchHorizontal} label="Change account" />
-          <NavbarLink icon={IconLogout} label="Logout" />
+          <NavbarLink icon={IconBrandFacebook} label="Facebook" />
+          <NavbarLink icon={IconBrandInstagram} label="Instagram" />
         </Stack>
       </Navbar.Section>
     </Navbar>
