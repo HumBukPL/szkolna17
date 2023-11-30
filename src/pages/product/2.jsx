@@ -24,6 +24,8 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
+import { comments2 } from "@/comments";
+import CommentHtml from "@/components/Comment";
 const ProductPage = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
@@ -198,6 +200,26 @@ const ProductPage = () => {
             </Flex>
           </Card>
         </Flex>
+      </Box>
+      <Box sx={{
+        // border: '1px solid red',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        rowGap: 20,
+        margin: '20px 0',
+      }}>
+        {comments2.map((comment, index) => {
+          return (
+            <CommentHtml 
+              key={index}
+              name={comment.name} 
+              timeAgo={comment.timeAgo}
+              avatar={comment.avatar}
+              comment={comment.comment}
+            />
+          )
+        })}
       </Box>
       {renderModal()}
     </>
