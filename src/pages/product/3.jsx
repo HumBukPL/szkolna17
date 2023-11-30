@@ -48,7 +48,7 @@ const ProductPage = () => {
         <Modal
           opened={opened}
           onClose={() => {
-            window.location.href = "/";
+            close();
           }}
           size={"xl"}
           title="Checkout summary"
