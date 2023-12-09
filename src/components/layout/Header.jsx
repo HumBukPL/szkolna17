@@ -30,6 +30,7 @@ import {
   IconChevronDown,
   IconInfoCircle,
   IconTruckReturn,
+  IconUsers,
 } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
@@ -112,6 +113,11 @@ const mockdata = [
     title: "Return policy",
     description: "Learn more about our return policy and the process for returning or exchanging items",
   },
+  {
+    icon: IconUsers,
+    title: "About us",
+    description: "Discover the story behind our brand. Learn about our mission, values, and the dedicated team that brings quality and innovation to everything we do",
+  },
 ];
 
 export default function HeaderMegaMenu() {
@@ -153,7 +159,7 @@ export default function HeaderMegaMenu() {
             spacing={0}
             className={classes.hiddenMobile}
           >
-            <a href="#" className={classes.link}>
+            <a href="/" className={classes.link}>
               Home
             </a>
             <HoverCard

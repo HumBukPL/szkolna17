@@ -62,3 +62,29 @@ export const comments3 = [
         avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"
     },
 ]
+
+
+export const opinions = [
+    {
+      id: 1,
+      name: 'Car Enthusiast 123',
+      comment: 'I had an amazing experience purchasing my dream car from your dealership. The selection was fantastic, and the staff was incredibly knowledgeable and friendly!',
+      timeAgo: '3 days ago',
+      avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png', // Replace with your actual avatar URL
+    },
+    {
+      id: 2,
+      name: 'Adventure Seeker',
+      comment: 'The customer service at your dealership is unmatched. They went above and beyond to help me find the perfect car for my adventurous lifestyle. Highly recommended!',
+      timeAgo: '2 weeks ago',
+      avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png', // Replace with your actual avatar URL
+    },
+    {
+      id: 3,
+      name: 'Family Cruiser',
+      comment: 'Our family found the ideal SUV at your dealership. The team made the whole process smooth, and we are thrilled with our new car. Thank you!',
+      timeAgo: '1 month ago',
+      avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png', // Replace with your actual avatar URL
+    },
+  ];
+  
