@@ -7,7 +7,7 @@ import { IconAddressBook, IconMail, IconPhone, IconSun } from "@tabler/icons-rea
 export default function ContactInformation() {
 
     const MOCKDATA = [
-        { title: 'Email', description: 'hello@mantine.dev', icon: IconMail },
+        { title: 'Email', description: 'hello@gmail.com', icon: IconMail },
         { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
         { title: 'Address', description: '844 Morris Park avenue', icon: IconAddressBook },
         { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
