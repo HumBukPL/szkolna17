@@ -28,6 +28,8 @@ import {
   IconFingerprint,
   IconCoin,
   IconChevronDown,
+  IconInfoCircle,
+  IconTruckReturn,
 } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
@@ -101,34 +103,14 @@ const useStyles = createStyles((theme) => ({
 
 const mockdata = [
   {
-    icon: IconCode,
-    title: "Open source",
-    description: "This Pokémon’s cry is very loud and distracting",
+    icon: IconInfoCircle,
+    title: "Contact information",
+    description: "Find our contact details and reach out to us for any inquiries or assistance.",
   },
   {
-    icon: IconCoin,
-    title: "Free for everyone",
-    description: "The fluid of Smeargle’s tail secretions changes",
-  },
-  {
-    icon: IconBook,
-    title: "Documentation",
-    description: "Yanma is capable of seeing 360 degrees without",
-  },
-  {
-    icon: IconFingerprint,
-    title: "Security",
-    description: "The shell’s rounded shape and the grooves on its.",
-  },
-  {
-    icon: IconChartPie3,
-    title: "Analytics",
-    description: "This Pokémon uses its flying ability to quickly chase",
-  },
-  {
-    icon: IconNotification,
-    title: "Notifications",
-    description: "Combusken battles with the intensely hot flames it spews",
+    icon: IconTruckReturn,
+    title: "Return policy",
+    description: "Learn more about our return policy and the process for returning or exchanging items",
   },
 ];
 
@@ -139,7 +121,10 @@ export default function HeaderMegaMenu() {
   const { classes, theme } = useStyles();
 
   const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
+    <UnstyledButton className={classes.subLink} key={item.title} onClick={()=>{
+      const url = "/" + item.title.replace(' ', '-').toLowerCase()
+      window.location.href = url;
+    }}>
       <Group noWrap align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
           <item.icon size={rem(22)} color={theme.fn.primaryColor()} />
@@ -182,7 +167,7 @@ export default function HeaderMegaMenu() {
                 <a href="#" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
-                      Features
+                      More
                     </Box>
                     <IconChevronDown
                       size={16}
@@ -194,7 +179,7 @@ export default function HeaderMegaMenu() {
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
                 <Group position="apart" px="md">
-                  <Text fw={500}>Features</Text>
+                  <Text fw={500}>More</Text>
                   <Anchor href="#" fz="xs">
                     View all
                   </Anchor>
