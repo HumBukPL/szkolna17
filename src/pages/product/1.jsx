@@ -26,8 +26,18 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import CommentHtml from "@/components/Comment";
 import { comments3 } from "@/comments";
+import { useEffect } from "react";
+import { logEvent } from "firebase/analytics";
+import { initAnalytics } from "@/firebase/firebase";
+
 const ProductPage = () => {
   const [opened, { open, close }] = useDisclosure(false);
+  useEffect(() => {
+    const analytics = initAnalytics();
+    if (analytics) {
+      logEvent(analytics, "page_view", { title: "Product Page 1" });
+    }
+  }, []);
 
   const product = {
     name: "Porshe 911 GT2 RS",
@@ -40,6 +50,16 @@ const ProductPage = () => {
       { label: "Automatic gearbox", icon: IconManualGearbox },
       { label: "Petrol", icon: IconGasStation },
     ],
+  };
+
+  const handleClick = () => {
+    open();
+    const analytics = initAnalytics();
+    if (analytics) {
+      logEvent(analytics, "buy_click", {
+        item: "Item 1",
+      });
+    }
   };
 
   const renderModal = () => {
@@ -155,7 +175,7 @@ const ProductPage = () => {
                 const Icon = item.icon;
                 return (
                   <Box
-                  key={index}
+                    key={index}
                     sx={{
                       display: "flex",
                       flexDirection: "row",
@@ -187,7 +207,7 @@ const ProductPage = () => {
               })}
               <Button
                 radius="xl"
-                onClick={open}
+                onClick={handleClick}
                 variant="filled"
                 color="indigo"
                 sx={{
@@ -202,24 +222,26 @@ const ProductPage = () => {
           </Card>
         </Flex>
       </Box>
-      <Box sx={{
-        // border: '1px solid red',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        rowGap: 20,
-        margin: '20px 0',
-      }}>
+      <Box
+        sx={{
+          // border: '1px solid red',
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          rowGap: 20,
+          margin: "20px 0",
+        }}
+      >
         {comments3.map((comment, index) => {
           return (
-            <CommentHtml 
+            <CommentHtml
               key={index}
-              name={comment.name} 
+              name={comment.name}
               timeAgo={comment.timeAgo}
               avatar={comment.avatar}
               comment={comment.comment}
             />
-          )
+          );
         })}
       </Box>
       {renderModal()}

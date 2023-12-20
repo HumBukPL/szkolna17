@@ -109,7 +109,13 @@ export default function Hero() {
       <Dots className={classes.dots} style={{ right: 0, top: 60 }} />
 
       <div className={classes.inner}>
-        <Title className={classes.title}>
+        <Title
+          className={classes.title}
+          sx={{
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            borderRadius: "0.5rem",
+          }}
+        >
           The{" "}
           <Text component="span" className={classes.highlight} inherit>
             best cars
@@ -117,8 +123,16 @@ export default function Hero() {
           that you can buy. Fell the power of those beasts, and enjoy.
         </Title>
 
-        <Container p={0} size={600}>
-          <Text size="lg" color="dimmed" className={classes.description}>
+        <Container p={0} size={700}>
+          <Text
+            size="lg"
+            color="white"
+            className={classes.description}
+            sx={{
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              borderRadius: "0.5rem",
+            }}
+          >
             Unleash luxury at our online sport car boutique! Explore
             high-performance vehicles, iconic brands, and seamless shopping.
             Elevate your driving experience with speed and sophistication, all

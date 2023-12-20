@@ -1,4 +1,4 @@
-import { Group, Stack } from "@mantine/core";
+import { Box, Container, Group, Stack } from "@mantine/core";
 
 import Car1 from "@/components/Car1";
 import Car2 from "@/components/Car2";
@@ -18,8 +18,19 @@ export default function Home() {
 
   return (
     <>
-      <Stack spacing="xl">
-        <Hero />
+      <Stack spacing="xl" w="100%">
+        <Box
+          w="100%"
+          sx={{
+            borderRadius: "0.5rem",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundImage: 'url("./baner3.png")',
+          }}
+        >
+          <Hero />
+        </Box>
         <Group
           position="center"
           mt={100}

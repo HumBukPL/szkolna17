@@ -15,6 +15,8 @@ import {
   IconManualGearbox,
   IconUsers,
 } from "@tabler/icons-react";
+import { logEvent } from "firebase/analytics";
+import { initAnalytics } from "@/firebase/firebase";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -113,9 +115,19 @@ export default function Car2() {
             </Text>
           </div>
 
-          <Button radius="xl" style={{ flex: 1 }} onClick={()=>{
-            window.location.href = '/product/2'
-          }}>
+          <Button
+            radius="xl"
+            style={{ flex: 1 }}
+            onClick={() => {
+              const analytics = initAnalytics();
+              if (analytics) {
+                logEvent(analytics, "view_offer_click", {
+                  item: "Item 2",
+                });
+              }
+              window.location.href = "/product/2";
+            }}
+          >
             View offer
           </Button>
         </Group>
